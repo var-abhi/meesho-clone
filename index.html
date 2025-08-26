@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Meesho Clone</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="meesho-header d-lg-flex align-items-center justify-content-lg-between">
+                <div class="header-logo">
+                    <img src="./images/meeshoLogo.svg" alt="Meesho Logo" width="156" height="36">
+                </div>
+                <div class="header-search-bar d-none d-lg-block">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #b0b0b0;"></i>
+                    <input type="text" placeholder="Try Saree, Kurti or Search by Product Code">
+                    <div class="on-focus row p-lg-3">
+                        <span class="col-lg-12 pb-lg-2 ps-lg-0">Popular Searches</span>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">saree</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">short kurti</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">kurti</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">tshirt</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">kurti set</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">top for women</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">earring</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">watch</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">top</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">shoes</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">slipper</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">lehanga</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">sampoo</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">trimmer</button>
+                        <button class="col-lg-3 p-lg-2 m-lg-2">gadgets </button>
+                    </div>
+                </div>
+                <div class="header-links d-lg-flex d-none align-items-center gap-4">
+                    <div>
+                        <span class="link"><a href="#">Become a Supplier</a></span>
+                    </div>
+                    <div>
+                        <span class="vertical-bar"></span>
+                    </div>
+                    <div>
+                        <span class="link"><a href="#">Investor Relations</a></span>
+                    </div>
+                    <div>
+                        <span class="vertical-bar"></span>
+                    </div>
+                </div>
+                <div class="header-profile-cart row align-items-center text-center">
+
+                    <div
+                        class="profile col-lg-6  text-center d-flex flex-column align-items-center justify-content-center">
+                        <div><i class="fa-solid fa-user fs-5"></i></div>
+                        <div class="fs-6 fw-medium"><span>Profile</span></div>
+                        <div class="login-box text-start p-3">
+                            <h4 class="fw-bold fs-5">Hello User</h4>
+                            <p>To access your meesho account</p>
+                            <div class="button-container"><button>Sign up</button></div>
+                            <div class="my-orders">
+                                <h5 class="fw-bold"><i class="fa-solid fa-bag-shopping"></i>&nbsp;My Orders</h5>
+                            </div>
+                            <div class="Delete">
+                                <h5 class="fw-bold">Delete Profile</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart col-lg-6">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span class="fs-6 fw-medium">Cart</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="products-links">
+            <div class="container-lg links-container">
+                <div class="d-flex align-items-center justify-content-between links-banner gap-4">
+                    <div class="product-link " id="sarees-box">
+                        <a href="#">Women Ethnic</a>
+                        <div class="d-flex justify-content-between sub-links">
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">sarees</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Cotton Sarees</a></li>
+                                    <li><a href="#">Silk Sarees</a></li>
+                                    <li><a href="#">Georgette Sarees</a></li>
+                                    <li><a href="#">Chiffon Sarees</a></li>
+                                    <li><a href="#">Net Sarees</a></li>
+                                    <li><a href="#">Art Silk Sarees</a></li>
+                                    <li><a href="#">Chiffon Sarees</a></li>
+                                    <li><a href="#">Heavy Work Sarees</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">kurti</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All kurti</a></li>
+                                    <li><a href="#">anarkali kurti</a></li>
+                                    <li><a href="#">rayon kurti</a></li>
+                                    <li><a href="#">cotton kurti</a></li>
+                                    <li><a href="#">chikankari kurti</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">kurta sets</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All kurta sets</a></li>
+                                    <li><a href="#">Kurta plazo sets</a></li>
+                                    <li><a href="#">Rayon Kurta sets</a></li>
+                                    <li><a href="#">Kurta pant sets</a></li>
+                                    <li><a href="#">cotton kurta sets</a></li>
+                                    <li><a href="#">Sharara sets</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Dupatta Sets</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Cotton Sets</a></li>
+                                    <li><a href="#">Rayon sets</a></li>
+                                    <li><a href="#">Printed Sets</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Suits and Dress Material</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All Suits and Dress Material</a></li>
+                                    <li><a href="#">Cotton Suits</a></li>
+                                    <li><a href="#">Embroidered Suits</a></li>
+                                    <li><a href="#">Crep Suits</a></li>
+                                    <li><a href="#">Silk Suits</a></li>
+                                    <li><a href="#">Patiala Suits</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Lahenga</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Lehanga cholis</a></li>
+                                    <li><a href="#">Net Lehanga</a></li>
+                                    <li><a href="#">Bridal Lehanga</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Other Ethnic</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Blouses</a></li>
+                                    <li><a href="#">Dupattas</a></li>
+                                    <li><a href="#">Lehanga</a></li>
+                                    <li><a href="#">Gown</a></li>
+                                    <li><a href="#">Skirts & Bottomwear</a></li>
+                                    <li><a href="#">Islamic fashion</a></li>
+                                    <li><a href="#">Petticoats</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- women western mega dropdown -->
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">Women Western</a>
+                        <div class="d-flex sub-links">
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">topwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">all topwear</a></li>
+                                    <li><a href="#">tops</a></li>
+                                    <li><a href="#">dresses</a></li>
+                                    <li><a href="#">t-shirts</a></li>
+                                    <li><a href="#">jumpsuits</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">bottomwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All bottomwear</a></li>
+                                    <li><a href="#">palazzos</a></li>
+                                    <li><a href="#">culottes</a></li>
+                                    <li><a href="#">trousers</a></li>
+                                    <li><a href="#">skirts</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">innerwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All innerwear</a></li>
+                                    <li><a href="#">Bra</a></li>
+                                    <li><a href="#">Panty</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">sleepwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">women nightdress</a></li>
+                                    <li><a href="#">night suits</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">maternity wear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">all maternity and feeding wear</a></li>
+                                    <li><a href="#">Maternity Kurtis & Dresses</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Sports Wear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All Women Sportwear</a></li>
+                                    <li><a href="#">Sports Bra</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- mens mega dropdown -->
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">men</a>
+                        <div class="d-flex sub-links">
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">top wear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">all top wear</a></li>
+                                    <li><a href="#">Tshirts</a></li>
+                                    <li><a href="#">Shirts</a></li>
+                                    <li><a href="#">Winter Wear</a></li>
+                                    <li><a href="#">Jackets</a></li>
+                                    <li><a href="#">Sweater and Sweatshirts</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">bottomwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Track Pants</a></li>
+                                    <li><a href="#">All Bottomwear</a></li>
+                                    <li><a href="#">Jeans</a></li>
+                                    <li><a href="#">Trousers</a></li>
+                                    <li><a href="#">Shorts</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Men Accessories</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All Men Accessories</a></li>
+                                    <li><a href="#">Watches</a></li>
+                                    <li><a href="#">Belts & Wallets</a></li>
+                                    <li><a href="#">Jewellery</a></li>
+                                    <li><a href="#">Bags</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">men footwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">men footwear</a></li>
+                                    <li><a href="#">casual shoes</a></li>
+                                    <li><a href="#">sports shoes</a></li>
+                                    <li><a href="#">flip flop & sandals</a></li>
+                                    <li><a href="#">formal shoes</a></li>
+                                    <li><a href="#">loafers</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">ethnic wear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">kurtas sets</a></li>
+                                    <li><a href="#">ethnic jackets</a></li>
+                                    <li><a href="#">bottomwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">inner & sleepwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All inner & sleepwear</a></li>
+                                    <li><a href="#">boxers</a></li>
+                                    <li><a href="#">underwears</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- kids mega dropdown menu -->
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">kids</a>
+                        <div class="d-flex sub-links">
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">boys & girls 2+ years</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">dresses</a></li>
+                                    <li><a href="#">boys sets</a></li>
+                                    <li><a href="#">girls sets</a></li>
+                                    <li><a href="#">ethnic Wear</a></li>
+                                    <li><a href="#">night wear</a></li>
+                                    <li><a href="#">winter wear</a></li>
+                                    <li><a href="#">top wear</a></li>
+                                    <li><a href="#">bottom wear</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">infant 0-2 years</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">rampers</a></li>
+                                    <li><a href="#">baby sets</a></li>
+                                    <li><a href="#">ethnic wear</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">toys & Accessories</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">soft toy</a></li>
+                                    <li><a href="#">footwear</a></li>
+                                    <li><a href="#">stationery</a></li>
+                                    <li><a href="#">watches</a></li>
+                                    <li><a href="#">Bags & backpacks</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 lh-lg ">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">baby care</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">baby bedding & Accessories</a></li>
+                                    <li><a href="#">all baby care</a></li>
+                                    <li><a href="#">newborn baby</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- home & kitchen mega dropdown menu -->
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">Home & kitchen</a>
+                        <div class="sub-links d-flex flex-wrap">
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize ">Kitchen & Appliances</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">View All</a></li>
+                                    <li><a href="#">Kitchen Tools</a></li>
+                                    <li><a href="#">Storage & Organizers</a></li>
+                                    <li><a href="#">Appliances</a></li>
+                                    <li><a href="#">Cookware</a></li>
+                                    <li><a href="#">Dinnerware</a></li>
+                                    <li><a href="#">Bakeware</a></li>
+                                    <li><a href="#">Glasses & Barware</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">Home Furnishing</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Bedsheets</a></li>
+                                    <li><a href="#">Curtains & Sheers</a></li>
+                                    <li><a href="#">Pillows, Cushions & Covers</a></li>
+                                    <li><a href="#">Cushions & Cushion Covers</a></li>
+                                    <li><a href="#">Carpets & Doormats</a></li>
+                                    <li><a href="#">Mattress Protectors</a></li>
+                                    <li><a href="#">Sofa & Diwan Sets</a></li>
+                                    <li><a href="#">Towels & Bathrobes</a></li>
+                                    <li><a href="#">Blankets, Quilts & Dohars</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize ">Home Decor</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All Home Decor</a></li>
+                                    <li><a href="#">Appliances Covers</a></li>
+                                    <li><a href="#">Clocks</a></li>
+                                    <li><a href="#">Storage & Organizers</a></li>
+                                    <li><a href="#">Showpieces</a></li>
+                                    <li><a href="#">Paintings & Photoframes</a></li>
+                                    <li><a href="#">Stickers & Wallpapers</a></li>
+                                    <li><a href="#">Lights</a></li>
+                                    <li><a href="#">Gifts & Mugs</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize ">Kitchen & Dining</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">Kitchen Storage</a></li>
+                                    <li><a href="#">Cookware & Bakeware</a></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize ">Home Improvement</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">All Home Essentials</a></li>
+                                    <li><a href="#">Cleaning Supplies</a></li>
+                                    <li><a href="#">Gardening</a></li>
+                                    <li><a href="#">Bathroom Accessories</a></li>
+                                    <li><a href="#">Insect Protection</a></li>
+                                    <li><a href="#">Home Tools</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">beauty & health</a>
+                        <div class="d-flex sub-links">
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">make up</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">face</a></li>
+                                    <li><a href="#">eyes</a></li>
+                                    <li><a href="#">lips</a></li>
+                                    <li><a href="#">nails</a></li>
+                                    <li><a href="#">make up kits</a></li>
+                                    <li><a href="#">brushes & tools</a></li>
+                                    <li><a href="#">makeup accessories</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">skincare</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">view all</a></li>
+                                    <li><a href="#">face masks & peels</a></li>
+                                    <li><a href="#">facecare</a></li>
+                                    <li><a href="#">haircare</a></li>
+                                    <li><a href="#">bath & shower</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">baby & mom</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">baby personal care</a></li>
+                                    <li><a href="#">mom care</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">mens care</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">beard care</a></li>
+                                    <li><a href="#">fragrances for men</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">healthcare</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">ear buds & cleaners</a></li>
+                                    <li><a href="#">condoms</a></li>
+                                    <li><a href="#">sanitary pads</a></li>
+                                    <li><a href="#">dental care</a></li>
+                                    <li><a href="#">weight management</a></li>
+                                    <li><a href="#">health monitors</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">jewellery & Accessories</a>
+                        <div class="d-flex sub-links">
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">jewellery</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">all jewellery</a></li>
+                                    <li><a href="#">jewellery set</a></li>
+                                    <li><a href="#">earrings & studs</a></li>
+                                    <li><a href="#">mangalsutras</a></li>
+                                    <li><a href="#">bangles</a></li>
+                                    <li><a href="#">necklaces</a></li>
+                                    <li><a href="#">rings</a></li>
+                                    <li><a href="#">kamabandh & maangtika</a></li>
+                                    <li><a href="#">anklets</a></li>
+                                    <li><a href="#">men jewellery</a></li>
+                                    <li><a href="#">oxidised</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">men accessories</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">view all</a></li>
+                                    <li><a href="#">watches</a></li>
+                                    <li><a href="#">belts & wallets</a></li>
+                                    <li><a href="#">caps & hats</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">women accessory</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">watches</a></li>
+                                    <li><a href="#">hair accessories</a></li>
+                                    <li><a href="#">sunglasses</a></li>
+                                    <li><a href="#">socks</a></li>
+                                    <li><a href="#">scarves and stoles</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">Bags & Footwear</a>
+                        <div class="d-flex sub-links">
+
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">women bags</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">all women bags</a></li>
+                                    <li><a href="#">handbags</a></li>
+                                    <li><a href="#">clutches</a></li>
+                                    <li><a href="#">slingbags</a></li>
+                                    <li><a href="#">wallets</a></li>
+                                    <li><a href="#">backpacks</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">men bags</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">men wallets</a></li>
+                                    <li><a href="#">crossbody bags & sling bags</a></li>
+                                    <li><a href="#">waist bags</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">travel bags, luggage and accessories</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">view all</a></li>
+                                    <li><a href="#">duffel & trolley bags</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">men footwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">sports shoes</a></li>
+                                    <li><a href="#">casual shoes</a></li>
+                                    <li><a href="#">formal shoes</a></li>
+                                    <li><a href="#">sandals</a></li>
+                                    <li><a href="#">loafers</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">women footwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">flats</a></li>
+                                    <li><a href="#">view all</a></li>
+                                    <li><a href="#">bellies</a></li>
+                                    <li><a href="#">heals and sandals</a></li>
+                                    <li><a href="#">boots</a></li>
+                                    <li><a href="#">flipflops & slippers</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">kids footwear</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">view all</a></li>
+                                    <li><a href="#">boys shoes</a></li>
+                                    <li><a href="#">girls shoes</a></li>
+                                    <li><a href="#">casual shoes</a></li>
+                                    <li><a href="#">flipflops & slippers</a></li>
+                                    <li><a href="#">sandals</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">Electronics</a>
+                        <div class="d-flex sub-links">
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">audio</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">bluetooth headphone & earphones</a></li>
+                                    <li><a href="#">wired headphones & earphones</a></li>
+                                    <li><a href="#">speakers</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">mobile & accessories</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">smartwatches</a></li>
+                                    <li><a href="#">mobile holders</a></li>
+                                    <li><a href="#">mobile cases and covers</a></li>
+                                    <li><a href="#">mobile chargers</a></li>
+                                    <li><a href="#">mobile & accessories - view all</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">smart wearables</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">vr box</a></li>
+                                    <li><a href="#">tripod</a></li>
+                                    <li><a href="#">microphone</a></li>
+                                    <li><a href="#">photo & video accessories</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-link" id="sarees-box">
+                        <a href="#">Sports & fitness</a>
+                        <div class="d-flex sub-links">
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">fitness</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">yoga</a></li>
+                                    <li><a href="#">hand grip strengthener</a></li>
+                                    <li><a href="#">tummy trimmers</a></li>
+                                    <li><a href="#">skipping ropes</a></li>
+                                    <li><a href="#">sweat belts</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-3 lh-lg">
+                                <h6 class="pb-lg-2 fw-bold text-capitalize">sports</h6>
+                                <ul class="list-unstyled text-dark fs-6 text-capitalize">
+                                    <li><a href="#">badminton</a></li>
+                                    <li><a href="#">skating</a></li>
+                                    <li><a href="#">football</a></li>
+                                    <li><a href="#">cricket</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                    <div class="product-link">
+                        <a href="#">Footwear</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner section starts here -->
+    <div class="banner">
+        <div class="banner-bg">
+            <img src="./images/bannerbg.png" class="img-fluid" alt="Banner Background">
+        </div>
+        <div class="container">
+            <div class="banner-content d-flex flex-column gap-4">
+                <h1>Smart Shopping<br>
+                    Trusted by Millions</h1>
+                <div>
+                    <button class=" banner-button">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner section ends here -->
+    <!-- special about meesho section starts here -->
+    <div class="container-fluid special-fluid-container p-3">
+        <div
+            class="about-special-container d-flex justify-content-center align-items-center gap-4 p-2 bg-white rounded">
+            <div><span class="fw-medium"><img src="./images/imgi_3_returns.svg" class="pe-1" alt="" width="20px"
+                        height="20px">7 Days Easy Return</span></div>
+            <div><span class="fw-medium"><img src="./images/imgi_4_cod.svg" class="pe-1" alt="" width="20px"
+                        height="20px">Cash on Delivery</span></div>
+            <div><span class="fw-medium"><img src="./images/imgi_5_lowest-price.svg" class="pe-1" alt="" width="20px"
+                        height="20px">Lowest Prices</span></div>
+        </div>
+    </div>
+
+
+    <!-- special about meesho section ends here -->
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="quick-links-section d-flex  justify-content-center gap-lg-4 p-lg-4 text-center">
+                <div class="floating">
+                    <div><img src="./images/ql-first.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-second.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-third.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-fourth.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-fifth.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-sixth.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-first.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+                <div class="floating">
+                    <div><img src="./images/ql-first.png" class="img-fluid" alt=""></div>
+                    <p class="pt-3">Ethnic wear</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid gold-container">
+        <div class="gold-section   p-4 text-center">
+            <div class="d-flex align-items-end"><button>
+                    Shop Now
+                </button></div>
+            <div style="grid-template-columns: 1fr 1fr;" class="right-gold-content d-grid gap-5">
+                <div class="col-lg-12"><img src="./images/gold1.png" alt=""></div>
+                <div><img src="./images/gold2.png" alt=""></div>
+                <div class="col-lg-12"><img src="./images/gold3.png" alt=""></div>
+                <div><img src="./images/gold4.png" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- original brands -->
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="original-brands-section row pt-5">
+                <div class="col-lg-6 ">
+                    <h3>Original Brands</h3>
+                </div>
+                <div class="col-lg-6 text-end"><a href="#" class="">VIEW ALL</a></div>
+                <div class="brands d-flex gap-4 pt-4 pb-5" id="scrollBox">
+                        <button class="scroll-btn left-btn" onclick="scrollBox.scrollBy({left: -220, behavior: 'smooth'})">&#10094;</button>
+                    <div><img src="./images/brandone.png" alt=""></div>
+                    <div><img src="./images/brandtwo.png" alt=""></div>
+                    <div><img src="./images/brandthree.png" alt=""></div>
+                    <div><img src="./images/brandfive.png" alt=""></div>
+                    <div><img src="./images/brandsix.png" alt=""></div>
+                    <div><img src="./images/brandseven.png" alt=""></div>
+                    <div><img src="./images/brandeight.png" alt=""></div>
+                        <button class="scroll-btn right-btn" onclick="scrollBox.scrollBy({left: 220, behavior: 'smooth'})">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
